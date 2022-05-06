@@ -12,10 +12,32 @@ Pong::Pong() {
 	player1.setPosition(sf::Vector2f(10, 210));
 	player2.setPosition(sf::Vector2f(470, 210));
 
+	ball_velocity_x = 5;
+	ball_velocity_y = 2;
+
 	pong.run();
 }
 
 void Pong::tick(cgfw::Game* game) {
+
+	if(game->getInputHandler().keyPressed(sf::Keyboard::W))
+		player1.move(sf::Vector2f(0, -5 * game->getTimeStep().getMultiplier()));
+
+	if(game->getInputHandler().keyPressed(sf::Keyboard::S))
+		player1.move(sf::Vector2f(0, 5 * game->getTimeStep().getMultiplier()));
+
+	if(game->getInputHandler().keyPressed(sf::Keyboard::Up))
+		player2.move(sf::Vector2f(0, -5 * game->getTimeStep().getMultiplier()));
+	
+	if(game->getInputHandler().keyPressed(sf::Keyboard::Down))
+		player2.move(sf::Vector2f(0, 5 * game->getTimeStep().getMultiplier()));
+
+	if(ball.getPosition().y + ball.getRadius() >= 500 || ball.getPosition().y <= 0)
+		ball_velocity_y *= -1;
+	if(ball.getPosition().x + ball.getRadius() >= 500 || ball.getPosition().x <= 0)
+		ball_velocity_x *= -1;
+
+	ball.move(sf::Vector2f(ball_velocity_x, ball_velocity_y));
 
 }
 

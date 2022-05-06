@@ -16,6 +16,9 @@ private:
 	sf::RectangleShape player2;
 	sf::CircleShape ball;
 
+	float ball_velocity_x;
+	float ball_velocity_y;
+
 };
 
 #endif
