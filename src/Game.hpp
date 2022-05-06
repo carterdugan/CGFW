@@ -5,7 +5,7 @@
 
 #include "InputHandler.hpp"
 #include "TimeStep.hpp"
-#include "MainState.hpp"
+#include "GameState.hpp"
 
 #define WIN_TITLE "CGFW"
 #define WINDOW_WIDTH_DEFAULT 500
@@ -18,7 +18,7 @@ namespace cgfw {
 class Game {
 
     public:
-        Game();
+        Game(GameState* main_state);
         ~Game();
 
         void run();

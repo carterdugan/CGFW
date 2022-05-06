@@ -1,8 +1,6 @@
 CC=g++
-EXEC=test
 LIBO=libcgfw.a
 CFLAGS=-I. -lsfml-graphics -lsfml-window -lsfml-system
-MAIN=main.cpp
 OBJ=Game.o GameState.o InputHandler.o TimeStep.o
 
 %.o: %.cpp
@@ -10,10 +8,8 @@ OBJ=Game.o GameState.o InputHandler.o TimeStep.o
 	@$(CC) -c $< $(CFLAGS)
 
 all: $(OBJ)
-	$(info Compiling Library "$(EXEC)")
+	$(info Creating Library "$(LIBO)")
 	@ar crf $(LIBO) $(OBJ)
-	$(info Compiling Test Program "$(EXEC)")
-	@$(CC) $(MAIN) libcgfw.a $(CFLAGS) -o $(EXEC)
 
 clean:
 	$(info Cleaning object files)

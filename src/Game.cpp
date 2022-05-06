@@ -1,17 +1,17 @@
 #include "Game.hpp"
 
-cgfw::Game::Game() :
+cgfw::Game::Game(GameState* main_state) :
     window(sf::VideoMode(WINDOW_WIDTH_DEFAULT, WINDOW_HEIGHT_DEFAULT), WIN_TITLE, sf::Style::Titlebar | sf::Style::Close),
     time_step(&window, FPS_DEFAULT, GAME_SPEED_DEFAULT) {
     win_width = WINDOW_WIDTH_DEFAULT;
     win_height = WINDOW_HEIGHT_DEFAULT;
 
-    current_state = new MainState;
+    current_state = main_state;
 
 }
 
 cgfw::Game::~Game() {
-    delete current_state;
+
 }
 
 void cgfw::Game::run() {
