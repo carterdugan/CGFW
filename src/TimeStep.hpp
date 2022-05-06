@@ -8,14 +8,17 @@ namespace cgfw {
 class TimeStep {
 
     public:
-        TimeStep(sf::RenderWindow* window, float frames_per_second, float game_speed);
+        TimeStep(sf::RenderWindow* window);
         ~TimeStep();
 
         void tick();
+        void setFPS(float frames_per_second);
+        void setSpeed(float game_speed);
         float getMultiplier();
 
     private:
 
+        sf::RenderWindow* win;
         float fps, speed, dt;
         sf::Clock clock;
 

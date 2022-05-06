@@ -1,11 +1,7 @@
 #include "TimeStep.hpp"
 
-cgfw::TimeStep::TimeStep(sf::RenderWindow* window, float frames_per_second, float game_speed) {
-    fps = frames_per_second;
-    speed = game_speed;
-    dt = 0;
-
-    window->setFramerateLimit(frames_per_second);
+cgfw::TimeStep::TimeStep(sf::RenderWindow* window) {
+    win = window;
 }
 
 cgfw::TimeStep::~TimeStep() {
@@ -14,6 +10,15 @@ cgfw::TimeStep::~TimeStep() {
 
 void cgfw::TimeStep::tick() {
     dt = clock.restart().asSeconds();
+}
+
+void cgfw::TimeStep::setFPS(float frames_per_second) {
+    fps = frames_per_second;
+    win->setFramerateLimit(fps);
+}
+
+void cgfw::TimeStep::setSpeed(float game_speed) {
+    speed = game_speed;
 }
 
 float cgfw::TimeStep::getMultiplier() {
