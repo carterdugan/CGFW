@@ -2,8 +2,9 @@ CC=g++
 LIBO=libcgfw.a
 CFLAGS=-I. -lsfml-graphics -lsfml-window -lsfml-system
 OBJ=Game.o GameState.o InputHandler.o TimeStep.o
+DIR=src
 
-%.o: %.cpp
+%.o: $(DIR)/%.cpp
 	$(info Compiling "$<")
 	@$(CC) -c $< $(CFLAGS)
 
@@ -14,4 +15,4 @@ all: $(OBJ)
 clean:
 	$(info Cleaning object files)
 	rm -f *.o
-	rm -f $(EXEC)
+	rm -f $(LIBO)
