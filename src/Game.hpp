@@ -26,6 +26,7 @@ class Game {
         InputHandler getInputHandler();
         TimeStep getTimeStep();
         GameState* getGameState();
+        void setGameState(GameState* game_state);
 
     private:
 

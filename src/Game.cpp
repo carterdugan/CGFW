@@ -52,3 +52,7 @@ cgfw::TimeStep cgfw::Game::getTimeStep() {
 cgfw::GameState* cgfw::Game::getGameState() {
     return current_state;
 }
+
+void cgfw::Game::setGameState(GameState* game_state) {
+    current_state = game_state;
+}
