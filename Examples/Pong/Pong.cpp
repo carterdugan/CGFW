@@ -4,7 +4,7 @@
 Pong::Pong() {
 
 	// Contructor takes an instance of a GameState subclass
-	cgfw::Game pong(this);
+	cgfw::Game pong(this, 500, 500, "Pong");
 
 
 	// SFML used for the players and ball

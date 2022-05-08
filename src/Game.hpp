@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include <SFML/Graphics.hpp>
+#include <string>
 
 #include "InputHandler.hpp"
 #include "TimeStep.hpp"
@@ -18,14 +19,16 @@ namespace cgfw {
 class Game {
 
     public:
-        Game(GameState* main_state);
-        ~Game();
+    Game(GameState* main_state);
+    Game(GameState* main_state, float window_width, float window_height, std::string title);
+    ~Game();
 
         void run();
 
         InputHandler getInputHandler();
         TimeStep getTimeStep();
         GameState* getGameState();
+        sf::RenderWindow* getWindow();
         void setGameState(GameState* game_state);
 
     private:

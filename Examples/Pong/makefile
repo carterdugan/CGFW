@@ -7,7 +7,6 @@ EXEC=pong
 	$(CC) $< $(CFLAGS) -c
 
 all: $(OBJ)
-	+$(MAKE) -C ../../
 	$(CC) $(OBJ) $(CFLAGS) -o $(EXEC)
 
 clean:

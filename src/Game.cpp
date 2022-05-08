@@ -14,6 +14,20 @@ cgfw::Game::Game(GameState* main_state) :
 
 }
 
+cgfw::Game::Game(GameState* main_state, float window_width, float window_height, std::string title) :
+        window(sf::VideoMode(window_width, window_height), title, sf::Style::Titlebar | sf::Style::Close),
+        time_step(&window) {
+
+    time_step.setFPS(FPS_DEFAULT);
+    time_step.setSpeed(GAME_SPEED_DEFAULT);
+
+    win_width = window_width;
+    win_height = window_height;
+
+    current_state = main_state;
+
+}
+
 cgfw::Game::~Game() {
 
 }
@@ -55,6 +69,10 @@ cgfw::TimeStep cgfw::Game::getTimeStep() {
 
 cgfw::GameState* cgfw::Game::getGameState() {
     return current_state;
+}
+
+sf::RenderWindow* cgfw::Game::getWindow() {
+    return &window;
 }
 
 void cgfw::Game::setGameState(GameState* game_state) {
