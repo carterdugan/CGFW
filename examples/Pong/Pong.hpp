@@ -3,6 +3,7 @@
 
 // Include the CGFW header which includes all of the necessary headers
 #include "CGFW.hpp"
+#include <cmath>
 
 /*
 State classes, from entire games to option menus, must extend the game

@@ -45,8 +45,41 @@ void Pong::tick(cgfw::Game* game) {
 
 	if(ball.getPosition().y + ball.getRadius() >= 500 || ball.getPosition().y <= 0)
 		ball_velocity_y *= -1;
-	if(ball.getPosition().x + ball.getRadius() >= 500 || ball.getPosition().x <= 0)
-		ball_velocity_x *= -1;
+
+    float testX = ball.getPosition().x;
+    float testY = ball.getPosition().y;
+    float dx, dy, distance;
+    if(ball_velocity_x < 0) {
+        if(testX < player1.getPosition().x)
+            testX = player1.getPosition().x;
+        else if(testX > player1.getPosition().x + 20)
+            testX = player1.getPosition().x + 20;
+
+        if(testY < player1.getPosition().y)
+            testY = player1.getPosition().y;
+        else if(testY > player1.getPosition().y + 80)
+            testY = player1.getPosition().y + 80;
+    }
+
+    if(ball_velocity_x > 0) {
+        if(testX < player2.getPosition().x)
+            testX = player2.getPosition().x;
+        else if(testX > player2.getPosition().x + 20)
+            testX = player2.getPosition().x + 20;
+
+        if(testY < player2.getPosition().y)
+            testY = player2.getPosition().y;
+        else if(testY > player2.getPosition().y + 80)
+            testY = player2.getPosition().y + 80;
+    }
+
+    dx = ball.getPosition().x - testX;
+    dy = ball.getPosition().y - testY;
+
+    distance = sqrt(dx*dx + dy*dy);
+
+    if(distance <= ball.getRadius())
+        ball_velocity_x *= -1;
 
 	ball.move(sf::Vector2f(ball_velocity_x * mult, ball_velocity_y * mult));
 
