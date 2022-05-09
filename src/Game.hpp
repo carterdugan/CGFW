@@ -33,7 +33,7 @@ render window.
 #define WINDOW_HEIGHT_DEFAULT 500
 #endif
 
-#ifndef
+#ifndef FPS_DEFAULT
 #define FPS_DEFAULT 60
 #endif
 
