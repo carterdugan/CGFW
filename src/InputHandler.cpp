@@ -1,5 +1,4 @@
 #include "InputHandler.hpp"
-#include <iostream>
 
 cgfw::InputHandler::InputHandler() {
     keys = new bool[0xFF];
