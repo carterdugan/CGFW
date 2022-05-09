@@ -61,7 +61,7 @@ void Pong::tick(cgfw::Game* game) {
             testY = player1.getPosition().y + 80;
     }
 
-    if(ball_velocity_x > 0) {
+    else if(ball_velocity_x > 0) {
         if(testX < player2.getPosition().x)
             testX = player2.getPosition().x;
         else if(testX > player2.getPosition().x + 20)
