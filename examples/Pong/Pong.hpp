@@ -14,7 +14,7 @@ class Pong : public cgfw::GameState {
 public:
 	Pong();
 
-	// Logic that is calculated here
+	// Put game logic here
 	virtual void tick(cgfw::Game* game);
 
 	// Any rendering is done here.
