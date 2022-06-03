@@ -4,6 +4,7 @@ The first thing you need to do is create a class that inherits the `GameState` c
 
 The `Game` class has two available constructors. One just requires and object of a `GameState` inherited class to be passed in and will use default macro values for the dimensions and title of the game window. The second constructor takes in the width, height and title of the window in addition to the `GameState`. The `Game` class consists of the following methods:
 
+## Methods
 | Method | Description |
 | ---- | --------- |
 | `run()` | Call after construction in order to begin running the game |
