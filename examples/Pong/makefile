@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I. -I../../src -L../../ -lcgfw -lsfml-graphics -lsfml-window -lsfml-system
+CFLAGS=-I. -I../../include -L../../ -lcgfw -lsfml-graphics -lsfml-window -lsfml-system
 OBJ=Pong.o
 EXEC=pong
 

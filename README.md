@@ -7,7 +7,7 @@ in the  main `CGFW/` directory. Each example
 has a makefile in its directory, but the library
 must be built first before these can be built.
 
-## USAGE
+## Linking and Usage
 Link with `-lcgfw` followed by your SFML libraries
 and include the "CGFW.hpp" header file wherever
 needed.  See `Examples/` folder for detailed
