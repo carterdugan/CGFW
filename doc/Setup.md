@@ -11,4 +11,4 @@ The `Game` class has two available constructors. One just requires and object of
 | `getTimeStep()` | Retrieve the timestep, used for getting the multiplier for consistent movement speeds. |
 | `getGameState()` | Get the current gamestate of the game. |
 | `getWindow()` | Get the game window. |
-| `setGameState()` | Set the game's current gamestate to a new desired gamestate. |
+| `setGameState(GameState state)` | Set the game's current gamestate to a new desired gamestate. |
