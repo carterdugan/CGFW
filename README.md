@@ -1,5 +1,5 @@
 # CGFW (WIP)
-A simple library that creates an SFML game outline for you. I made this for myself, but decided it might be worth sharing.
+A simple framework that creates an SFML game outline for you. I made this for myself, but decided it might be worth sharing.
 
 ## Building
 To build the cgfw library, use the makefile
