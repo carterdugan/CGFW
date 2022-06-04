@@ -7,8 +7,8 @@ cgfw::Entity::Entity(Game game) {
 }
 
 void cgfw::Entity::move(float vx, float vy) {
-    x += vx;
-    y += vy;
+    x += vx * multiplier;
+    y += vy * multiplier;
     if(shape != nullptr) shape->move(sf::Vector2f(vx, vy));
 }
 
