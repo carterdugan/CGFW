@@ -15,6 +15,8 @@ void cgfw::Entity::move(float vx, float vy) {
 void cgfw::Entity::bindShape(sf::Shape* m_shape) {
     shape = m_shape;
 }
+
+// TODO: Fill method
 void cgfw::Entity::bindVertexArray(sf::VertexArray array, float width, int index) {
 
 }
