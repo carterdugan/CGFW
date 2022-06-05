@@ -11,4 +11,3 @@ Self explanatory.
 #include "GameState.hpp"
 #include "InputHandler.hpp"
 #include "TimeStep.hpp"
-#include "Entity.hpp"
