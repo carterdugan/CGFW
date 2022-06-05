@@ -1,7 +1,7 @@
 CC=g++
 LIBO=libcgfw.a
 CFLAGS=-I./include -lsfml-graphics -lsfml-window -lsfml-system
-OBJ=Game.o GameState.o InputHandler.o TimeStep.o Entity.o
+OBJ=Game.o GameState.o InputHandler.o TimeStep.o
 DIR=src
 
 %.o: $(DIR)/%.cpp

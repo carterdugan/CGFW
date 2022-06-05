@@ -11,4 +11,4 @@ all: $(OBJ)
 
 clean:
 	rm -f *.o
-	rm -f pong
+	rm -f $(EXEC)
